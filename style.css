@@ -174,18 +174,18 @@ header {
     position: relative;
     z-index: 99;
     margin-top: -100px;
-    background-image: linear-gradient(180deg,#0c0c0c00 -300%,#000000 95%);
+    background-color: #000000;
     background-size: cover;
     padding: 80px 40px 40px 70px;
     border-top-left-radius: 30% 30px;
     border-top-right-radius: 30% 30px;
-    box-shadow: 0 -30px 30px #8020207d;
+    box-shadow: 0 -20px 20px #0c0c0c7d;
 }
 
 .video-section h1 {
     font-family: 'NHL Ducks', sans-serif !important;
     text-align: center;
-    font-size: 65px;
+    font-size: 107px;
     font-weight: 500;
     margin-bottom: 80px;
 }
@@ -589,9 +589,7 @@ iframe {
     line-height: 25px;
     font-weight: 500;
 }
-.blog-box h2 span{
-    color: #EE9A2A;
-}
+
 .blog-box h3 {
     font-size: 13px;
     font-weight: 500;
