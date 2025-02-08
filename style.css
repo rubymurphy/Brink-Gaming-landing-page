@@ -1,38 +1,47 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Wanted Sans', sans-serif;
 }
+
 @font-face {
     font-family: 'Wanted Sans';
     src: url('./WantedSans-1.0.1/ttf/WantedSans-Regular.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
-  }
-a{
+}
+
+a {
     text-decoration: none;
 }
-li{
+
+li {
     list-style-type: none;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
-img{
+
+img {
     width: 100%;
     height: 100%;
 }
-body{
+
+body {
     background-color: black;
 }
-button{
+
+button {
     cursor: pointer;
 }
-header.active{
+
+header.active {
     background-color: rgba(0, 0, 0, 0.87);
     box-shadow: 0 2px 3px rgba(255, 255, 255, 0.26);
 }
+
 header {
     width: 100%;
     display: flex;
@@ -45,29 +54,45 @@ header {
     top: 0;
     z-index: 100;
 }
-.logo{
+
+.logo {
     width: 120px;
     height: 35px;
 }
-.nav-bar{
+
+.nav-bar {
     width: 200px;
     display: flex;
     justify-content: space-between;
 }
-.nav-bar button{
+
+.nav-bar button {
     background-color: transparent;
     color: #ffffff;
     border: none;
+    transition: all .3s ease-in-out;
 }
-.join-waitlist{
+
+.nav-bar button:hover {
+    color: #EE9A2A;
+}
+
+.join-waitlist {
     width: 70%;
-    border: 1px solid #ff0000!important;
-    background-color: #000000!important;
-    color: #ff0000!important;
+    border: 1px solid #ff0000 !important;
+    background-color: #000000 !important;
+    color: #ff0000 !important;
     padding: 9px;
-    border-radius:15px ;
+    border-radius: 15px;
 }
-.hero-section{
+
+.join-waitlist:hover {
+    background-color: #ff0000 !important;
+    border: 1px solid white !important;
+    color: #ffffff !important;
+}
+
+.hero-section {
     width: 100%;
     background-image: url(./img-resources/Rectangle\ 335.png);
     background-position: center;
@@ -77,36 +102,48 @@ header {
     position: relative;
     color: white;
 }
-.hero-info{
+
+.hero-info {
     position: absolute;
     top: 160px;
     left: 40px;
     width: 40%;
 }
-.hero-info h1{
+
+.hero-info h1 {
     font-size: 26px;
     font-weight: 300;
     margin-bottom: 30px;
     line-height: 40px;
 }
-.hero-info h1 span{
+
+.hero-info h1 span {
     color: #EE9A2A;
 }
-.hero-info button{
+
+.hero-info button {
     width: 130px;
     border: none;
-    background-image: linear-gradient(90deg, #E14C00,#C20013);
+    background-image: linear-gradient(90deg, #E14C00, #C20013);
     color: #ffffff;
     padding: 10px;
-    border-radius:15px ;
+    transition: all .3s ease-in-out;
+    border-radius: 15px;
 }
-.sponsors{
+
+.hero-info:hover button:hover {
+    background-image: linear-gradient(180deg, #C20013, #E14C00);
+    box-shadow: 2px 2px 5px 2px rgba(250, 248, 248, 0.394);
+}
+
+.sponsors {
     position: absolute;
     bottom: 150px;
     right: 40px;
     width: 250px;
 }
-.sponsor-img{
+
+.sponsor-img {
     display: flex;
     margin-top: 10px;
     justify-content: space-between;
@@ -114,47 +151,56 @@ header {
     width: 80%;
     align-items: center;
 }
-.sponsors p{
+
+.sponsors p {
     font-size: 14px;
     color: #A8A8A8;
 }
-.wormhole-logo{
+
+.wormhole-logo {
     width: 40px;
     height: 100%;
 }
-.movement-logo{
+
+.movement-logo {
     width: calc(100% - 60px);
     height: 60%;
 }
-.video-section{
+
+.video-section {
     width: 100%;
     height: auto;
-    background-color: black;
     color: white;
     position: relative;
     z-index: 99;
     margin-top: -100px;
-    padding:80px 40px 40px 70px;
-    border-top-left-radius: 30% 30px; 
+    background-image: linear-gradient(180deg,#0c0c0c00 -300%,#000000 95%);
+    background-size: cover;
+    padding: 80px 40px 40px 70px;
+    border-top-left-radius: 30% 30px;
     border-top-right-radius: 30% 30px;
-    box-shadow: 0 -15px 15px rgba(212, 16, 16, 0.2);
+    box-shadow: 0 -30px 30px #8020207d;
 }
-.video-section h1{
-    font-family: 'NHL Ducks', sans-serif!important;
+
+.video-section h1 {
+    font-family: 'NHL Ducks', sans-serif !important;
     text-align: center;
     font-size: 65px;
-    font-weight: 500;    
-    margin-bottom: 80px;             
+    font-weight: 500;
+    margin-bottom: 80px;
 }
-.video-section h1 span{
-    color:#EE9A2A;
-    font-family: 'NHL Ducks', sans-serif!important;
+
+.video-section h1 span {
+    color: #EE9A2A;
+    font-family: 'NHL Ducks', sans-serif !important;
 }
-iframe{
+
+iframe {
     width: 100%;
     height: 90vh;
     border-radius: 20px;
 }
+
 .mission-section {
     width: 100%;
     text-align: center;
@@ -164,57 +210,72 @@ iframe{
     background-size: cover;
     padding: 30px 40px;
     height: auto;
-    background-image:url(./img-resources/mission-background.jpg) ;
+    background-image: url(./img-resources/mission-background.jpg);
     background-clip: content-box;
     background-color: black;
 }
-.mission-section p{
+
+.mission-section p {
     font-size: 15px;
     margin-bottom: 25px;
     margin-top: 20px;
     color: #A8A8A8;
 }
-.mission-section h1{
+
+.mission-section h1 {
     width: 45%;
     font-weight: 500;
     margin: auto;
     line-height: 30px;
     font-size: 22px;
 }
-.mission-section h1 span{
+
+.mission-section h1 span {
     color: #EE9A2A;
 }
-.mission-section button{
+
+.mission-section button {
     width: 130px;
     border: none;
-    background-image: linear-gradient(90deg, #E14C00,#C20013);
+    background-image: linear-gradient(90deg, #E14C00, #C20013);
     color: #ffffff;
     padding: 10px;
-    border-radius:15px;
+    border-radius: 15px;
     margin-top: 30px;
     margin-bottom: 30px;
+    transition: all .3s ease-in-out;
 }
-.value-section{
+
+.mission-section button:hover {
+    background-image: linear-gradient(180deg, #C20013, #E14C00);
+    box-shadow: 2px 2px 5px 2px rgba(250, 248, 248, 0.394);
+}
+
+.value-section {
     width: 100%;
     padding: 60px 40px;
 }
-.value-head{
+
+.value-head {
     text-align: center;
     color: white;
 }
-.value-head p{
+
+.value-head p {
     font-size: 15px;
     margin-bottom: 25px;
     margin-top: 20px;
     color: #A8A8A8;
 }
-.value-head h1{
+
+.value-head h1 {
     font-weight: 500;
     margin: auto;
     line-height: 30px;
     font-size: 22px;
 }
-.value-container{
+
+.value-container {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -224,46 +285,54 @@ iframe{
     justify-content: space-between;
     align-items: center;
 }
-.value-box{
+
+.value-box {
     width: 31%;
     color: white;
     /* border: 1px solid red; */
     padding: 35px 5px;
     transition: all .5s ease-in-out;
 }
-.value-box:hover{
+
+.value-box:hover {
     box-shadow: 0px 0px 5px 10px #c7bfbf68;
     border-radius: 10px;
     cursor: pointer;
     transform: translateY(-20px);
 }
-.value-box h1{
+
+.value-box h1 {
     text-align: center;
     margin-top: 20px;
     font-size: 20px;
 }
-.value-box p{
+
+.value-box p {
     font-size: 13.5px;
     color: #A8A8A8;
     text-align: center;
     margin-top: 15px;
     line-height: 20px;
 }
-.value-img{
+
+.value-img {
     width: 28%;
     margin: auto;
 }
-.developer-section{
+
+.developer-section {
     background-color: #EE9A2A;
     text-align: center;
     padding: 100px 0px;
 }
-.developer-section p{
+
+.developer-section p {
     font-size: 15px;
     color: #000000;
     margin-bottom: 30px;
 }
-.developer-section h1{
+
+.developer-section h1 {
     width: 45%;
     font-weight: 500;
     margin: auto;
@@ -271,36 +340,49 @@ iframe{
     line-height: 30px;
     font-size: 22px;
 }
-.developer-section button{
+
+.developer-section button {
     width: 130px;
-    border: 1px solid #ff0000!important;
-    background-color: #000000!important;
-    color: #ff0000!important;
+    border: 1px solid #ff0000 !important;
+    background-color: #000000 !important;
+    color: #ff0000 !important;
     padding: 10px;
-    border-radius:15px;
+    border-radius: 15px;
     margin-top: 30px;
+    transition: all .3s ease-in-out;
 }
-.journey-section{
+
+.developer-section button:hover {
+    background-color: #ff0000!important;
+    color: #FDFBFF!important;
+    border: 1px solid white!important;
+}
+
+.journey-section {
     width: 100%;
     padding: 100px 40px;
     color: white;
 }
-.journey-head{
+
+.journey-head {
     text-align: center;
 }
-.journey-head p{
+
+.journey-head p {
     font-size: 15px;
     color: #A8A8A8;
     margin-bottom: 30px;
 }
-.journey-head h1{
+
+.journey-head h1 {
     font-weight: 500;
     margin: auto;
     color: #FDFBFF;
     line-height: 30px;
     font-size: 22px;
 }
-.journey-container{
+
+.journey-container {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -311,7 +393,8 @@ iframe{
     position: relative;
     margin-top: 40px;
 }
-.journey-container::before{
+
+.journey-container::before {
     content: "";
     position: absolute;
     background-color: #EE9A2A;
@@ -322,10 +405,10 @@ iframe{
     top: 0;
 }
 
-.journey-box:nth-child(1)::before{
+.journey-box:nth-child(1)::before {
     content: "";
     position: absolute;
-    background-color:#ffffff ;
+    background-color: #ffffff;
     width: 10px;
     height: 10px;
     border: 5px solid #EE9A2A;
@@ -334,10 +417,11 @@ iframe{
     border-radius: 50%;
     top: 70px;
 }
-.journey-box:nth-child(2)::before{
+
+.journey-box:nth-child(2)::before {
     content: "";
     position: absolute;
-    background-color:#0e0103 ;
+    background-color: #0e0103;
     width: 10px;
     height: 10px;
     border: 5px solid #A8A8A8;
@@ -346,10 +430,11 @@ iframe{
     top: 190px;
     border-radius: 50%;
 }
-.journey-box:nth-child(3)::before{
+
+.journey-box:nth-child(3)::before {
     content: "";
     position: absolute;
-    background-color:#0e0103 ;
+    background-color: #0e0103;
     width: 10px;
     height: 10px;
     border: 5px solid #A8A8A8;
@@ -358,10 +443,11 @@ iframe{
     top: 370px;
     border-radius: 50%;
 }
-.journey-box:nth-child(4)::before{
+
+.journey-box:nth-child(4)::before {
     content: "";
     position: absolute;
-    background-color:#0e0103;
+    background-color: #0e0103;
     width: 10px;
     height: 10px;
     border: 5px solid #A8A8A8;
@@ -370,11 +456,12 @@ iframe{
     top: 550px;
     border-radius: 50%;
 }
-.journey-box:nth-child(4)::after{
+
+.journey-box:nth-child(4)::after {
     content: url(./img-resources/gem.png);
     padding: 8px 7px 2px 6px;
     position: absolute;
-    background-color:#EE9A2A;
+    background-color: #EE9A2A;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -384,8 +471,9 @@ iframe{
     bottom: 0;
     border-radius: 50%;
 }
-.journey-box h1{
-    border-left:2px solid #D9D9D9;
+
+.journey-box h1 {
+    border-left: 2px solid #D9D9D9;
     color: #FFFFFF;
     padding: 5px 0px 5px 30px;
     width: 100%;
@@ -395,39 +483,46 @@ iframe{
     justify-content: space-between;
     margin-bottom: 20px;
 }
+
 .journey-box:nth-child(1) h1,
 .journey-box:nth-child(1) h1 p {
     color: #EE9A2A;
     border-color: #EE9A2A;
 }
-.journey-box h1 p{
+
+.journey-box h1 p {
     font-size: 15px;
     font-weight: 500;
     width: initial;
 }
-.journey-box p{
+
+.journey-box p {
     width: 55%;
     font-size: 19px;
     font-weight: 500;
     color: #A8A8A8;
     line-height: 30px;
 }
-.blog-section{
+
+.blog-section {
     padding: 50px 40px 120px 40px;
     position: relative;
     height: auto;
-    background-image: linear-gradient(180deg,black 60%,#f0323268);
+    background-image: linear-gradient(180deg, black 60%, #f0323268);
 }
-.blog-head{
+
+.blog-head {
     text-align: center;
 }
-.blog-head p{
+
+.blog-head p {
     font-size: 15px;
     margin-bottom: 25px;
     margin-top: 20px;
     color: #A8A8A8;
 }
-.blog-head h1{
+
+.blog-head h1 {
     font-weight: 500;
     margin: auto;
     line-height: 30px;
@@ -435,7 +530,8 @@ iframe{
     color: #FDFBFF;
     width: 36%;
 }
-.blog-container{
+
+.blog-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -443,39 +539,47 @@ iframe{
     color: white;
     margin-top: 80px;
     row-gap: 40px;
+    align-items: stretch;
     flex-wrap: wrap;
     box-shadow: 10px 15px 15px rgba(212, 16, 16, 0.2);
 }
-.blog-box{
+
+.blog-box {
     width: 31%;
     background-color: #220004;
     border-radius: 10px;
     overflow: hidden;
     transition: all .5s ease-in-out;
 }
-.blog-box:hover{
+
+.blog-box:hover {
     box-shadow: 0px 0px 5px 10px #f0323268;
     cursor: pointer;
     transform: translateY(-20px);
 }
-.blog-img{
+
+.blog-img {
     width: 100%;
     height: 250px;
 }
-.blog-box p{
+
+.blog-box p {
     color: #EE9A2A;
     font-size: 18px;
     margin-left: 20px;
     margin-top: 20px;
 }
-.blog-box h1{
+
+.blog-box h1 {
     font-size: 22px;
     margin-left: 20px;
     margin-top: 20px;
     color: #FFFFFF;
     font-weight: 500;
+    text-align: center;
 }
-.blog-box h2{
+
+.blog-box h2 {
     color: #A8A8A8;
     font-size: 15px;
     margin-left: 20px;
@@ -485,13 +589,17 @@ iframe{
     line-height: 25px;
     font-weight: 500;
 }
-.blog-box h3{
+.blog-box h2 span{
+    color: #EE9A2A;
+}
+.blog-box h3 {
     font-size: 13px;
     font-weight: 500;
     margin: 20px 20px 40px;
     color: #FDFBFF;
 }
-.blog-section button{
+
+.blog-section button {
     display: flex;
     text-align: right;
     position: absolute;
@@ -504,6 +612,7 @@ iframe{
     margin-top: 40px;
     font-size: 15px;
 }
+
 .blog-section button span {
     width: 40px;
     height: 40px;
@@ -511,7 +620,8 @@ iframe{
     background-color: #fdfbff51;
     border-radius: 50%;
 }
-.about-section{
+
+.about-section {
     width: 100%;
     background-image: url(./img-resources/About-background.png);
     background-position: center;
@@ -521,10 +631,12 @@ iframe{
     padding: 100px 40px;
     color: white;
 }
-.about-content{
+
+.about-content {
     width: 30%;
 }
-.about-content h1{
+
+.about-content h1 {
     width: 100%;
     font-weight: 500;
     margin: auto;
@@ -533,58 +645,80 @@ iframe{
     font-size: 25px;
     margin-bottom: 25px;
 }
-.about-content h1 span{
+
+.about-content h1 span {
     color: #EE9A2A;
 }
-.about-content p{
+
+.about-content p {
     font-size: 15px;
     color: #A8A8A8;
     margin-bottom: 30px;
 }
-.about-content button{
+
+.about-content button {
     width: 130px;
     border: none;
-    background-image: linear-gradient(90deg, #E14C00,#C20013);
+    background-image: linear-gradient(90deg, #E14C00, #C20013);
     color: #ffffff;
     padding: 10px;
-    border-radius:15px;
+    border-radius: 15px;
+    transition: all .3s ease-in-out;
 }
-footer{
+
+.about-content button:hover{
+    background-image: linear-gradient(180deg, #C20013, #E14C00);
+    box-shadow: 2px 2px 5px 2px rgba(250, 248, 248, 0.394);
+}
+
+footer {
     color: white;
     padding: 40px 40px;
 }
-.footer-content{
+
+.footer-content {
     display: flex;
     justify-content: space-between;
 }
-.footer-info{
+
+.footer-info {
     width: 55%;
     display: flex;
     justify-content: space-between;
 }
-.footer-box{
+
+.footer-box {
     width: 22%;
 }
-.footer-box h1{
+
+.footer-box h1 {
     font-size: 20px;
     color: #FFFFFF;
     font-weight: 500;
 }
-.footer-box ul{
+
+.footer-box ul {
     margin-top: 40px;
 }
-.footer-box ul li{
+
+.footer-box ul li {
     font-size: 15px;
     font-weight: 500;
     margin-bottom: 20px;
 }
-.footer-box ul li a{
-    color: #A8A8A8!important;
+
+.footer-box ul li a {
+    color: #A8A8A8 !important;
+    transition: all .3s ease-in-out;
 }
-.footer-box:nth-child(3){
+.footer-box ul li a:hover{
+    color: #EE9A2A!important;
+}
+.footer-box:nth-child(3) {
     width: 30%;
 }
-.copyright{
+
+.copyright {
     width: 100%;
     border-top: 1px solid #D9D9D9;
     margin-top: 30px;
@@ -593,17 +727,47 @@ footer{
     justify-content: space-between;
     align-items: center;
 }
-.copyright h1{
+
+.copyright h1 {
     font-size: 15px;
     font-weight: 500;
     color: #FFFFFF;
 }
-.copyright div{
+
+.copyright div {
     display: flex;
     gap: 30px;
     font-size: 15px;
     font-weight: 500;
 }
+
 .copyright div a {
     color: #FFFFFF;
+}
+.copyright div a:hover{
+    color: #FFFFFF;
+}
+.scroll-button{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    color: #C20013;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.606);
+    border: 2px solid #C20013;
+    position: fixed;
+    top:85vh ;
+    display: flex;
+    box-shadow: 0px 0px 2px 4px rgba(192, 189, 189, 0.168);
+    justify-content: center;
+    align-items: center;
+    right: 40px;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+}
+.scroll-button:hover{
+    color: #FFFFFF;
+    background-color: rgba(194, 0, 19, 0.709);
+    border:2px solid #FFFFFF;
+    box-shadow: 0px 0px 2px 4px rgba(192, 189, 189, 0.284)
 }
