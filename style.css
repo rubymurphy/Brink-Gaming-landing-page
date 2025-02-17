@@ -777,8 +777,9 @@ footer {
         min-height: 90vh;
     }
     .hero-info{
-        position: relative;
+        position: initial;
         margin: auto;
+        padding-top: 120px;
         width: 60%;
     }
     .hero-info h1{
