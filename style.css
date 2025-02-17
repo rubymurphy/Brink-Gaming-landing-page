@@ -910,7 +910,7 @@ footer {
 }}
 @media screen and (max-width:550px){
     .hero-section{
-        height: 50vh;
+        height: auto!important;
         min-height: 50vh;
     }
     .hero-info{
